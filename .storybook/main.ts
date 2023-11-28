@@ -18,5 +18,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  staticDirs: ['../src/styles/story-book-themes'], //👈 Configures the static asset folder in Storybook
 };
 export default config;
