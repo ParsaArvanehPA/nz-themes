@@ -3,6 +3,7 @@ import {WelcomeComponent} from "./welcome.component";
 import {applicationConfig, moduleMetadata} from "@storybook/angular";
 import {NzCollapseModule} from "ng-zorro-antd/collapse";
 import {NzRadioModule} from "ng-zorro-antd/radio";
+import {FormsModule} from "@angular/forms";
 
 
 const meta: Meta<WelcomeComponent> = {
@@ -10,7 +11,7 @@ const meta: Meta<WelcomeComponent> = {
   component: WelcomeComponent,
   decorators: [
     moduleMetadata({
-      imports: [NzCollapseModule, NzRadioModule]
+      imports: [NzCollapseModule, NzRadioModule, FormsModule]
     })
   ]
 };

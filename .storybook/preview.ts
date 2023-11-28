@@ -3,6 +3,7 @@ import {provideAnimations} from "@angular/platform-browser/animations";
 import {BrowserModule} from "@angular/platform-browser";
 import {importProvidersFrom} from "@angular/core";
 import {applicationConfig} from "@storybook/angular";
+import {withThemeSwitching} from "./addons/storybook-dark-mode";
 
 const preview: Preview = {
   parameters: {
@@ -17,7 +18,8 @@ const preview: Preview = {
   decorators: [
     applicationConfig({
       providers: [importProvidersFrom(BrowserModule), provideAnimations()],
-    })
+    }),
+    withThemeSwitching(),
   ],
 };
 
