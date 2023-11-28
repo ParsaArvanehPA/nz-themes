@@ -48,7 +48,9 @@
               }
             ],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/styles/themes"]
+              "includePaths": [
+                "src/styles/themes"
+              ]
             },
             "scripts": [],
             "vendorChunk": true,
@@ -147,6 +149,24 @@
             "production": {
               "devServerTarget": "nz-themes:serve:production"
             }
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "nz-themes:build",
+            "compodoc": false,
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "nz-themes:build",
+            "compodoc": false,
+            "outputDir": "storybook-static"
           }
         }
       }
