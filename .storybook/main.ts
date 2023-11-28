@@ -6,7 +6,11 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    'storybook-dark-mode'
   ],
+  core: {
+    disableTelemetry: true,
+  },
   framework: {
     name: "@storybook/angular",
     options: {},
